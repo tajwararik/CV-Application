@@ -14,3 +14,12 @@
   background-color: #363636;
   user-select: none;
 }
+
+h1 {
+  width: 100%;
+  font-size: 3rem;
+  color: #e5e2e2;
+  background-color: #ff2020;
+  padding: 5px;
+  margin-bottom: 50px;
+}
