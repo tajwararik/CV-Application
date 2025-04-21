@@ -23,3 +23,8 @@ h1 {
   padding: 5px;
   margin-bottom: 50px;
 }
+
+.cv {
+  max-width: 1280px;
+  width: 100%;
+}
