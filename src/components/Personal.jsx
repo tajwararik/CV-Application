@@ -65,7 +65,8 @@ function PersonalInfo() {
           <button type="submit">Submit</button>
         </form>
       ) : (
-        <div className="personalProfile">
+        <div className="personal-profile">
+          <h2>General Information</h2>
           <p>Name: {info.name}</p>
           <p>Email: {info.email}</p>
           <p>Phone: {info.phone}</p>
