@@ -1,10 +1,11 @@
-form {
+form, .personal-profile {
     font-size: 1.5rem;
     text-align: left;
     color: #e5e2e2;
 }
 
-fieldset {
+fieldset,
+.personal-profile > p {
     margin: 15px 0;
     border: none;
 }
@@ -17,7 +18,8 @@ input {
     border-radius: 8px;
 }
 
-form > button {
+form > button,
+.personal-profile > button {
     font-size: 1.25rem;
     padding: 8px;
     border: 2px solid #fff;
