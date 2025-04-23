@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Personal.css";
+import "../styles/style.css";
 
 function PersonalInfo() {
   const [isEdit, setIsEdit] = useState(true);
@@ -23,7 +23,8 @@ function PersonalInfo() {
   }
 
   return (
-    <div className="personalInfo">
+    <>
+      <h2>General Information</h2>
       {isEdit ? (
         <form onSubmit={handleSubmit}>
           <fieldset>
@@ -65,8 +66,7 @@ function PersonalInfo() {
           <button type="submit">Submit</button>
         </form>
       ) : (
-        <div className="personal-profile">
-          <h2>General Information</h2>
+        <div className="profile">
           <p>Name: {info.name}</p>
           <p>Email: {info.email}</p>
           <p>Phone: {info.phone}</p>
@@ -75,7 +75,7 @@ function PersonalInfo() {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
