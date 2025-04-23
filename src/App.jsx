@@ -1,5 +1,6 @@
 import PersonalInfo from "./components/Personal.jsx";
 import EducationalInfo from "./components/Education.jsx";
+import ExperienceInfo from "./components/Experience.jsx";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <div className="cv">
         <PersonalInfo />
         <EducationalInfo />
+        <ExperienceInfo />
       </div>
     </>
   );
