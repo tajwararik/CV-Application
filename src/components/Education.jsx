@@ -35,7 +35,7 @@ function EducationalInfo() {
               name="name"
               value={info.name}
               onChange={handleChange}
-              placeholder="Enter your name"
+              placeholder="Enter school name"
             />
           </fieldset>
 
@@ -47,7 +47,7 @@ function EducationalInfo() {
               name="title"
               value={info.title}
               onChange={handleChange}
-              placeholder="Enter the title"
+              placeholder="Enter study title"
             />
           </fieldset>
 
@@ -79,10 +79,10 @@ function EducationalInfo() {
         </form>
       ) : (
         <div className="profile">
-          <p>Name: {info.name}</p>
-          <p>Tile of study: {info.title}</p>
-          <p>Date of start: {info.startDate}</p>
-          <p>Date of end: {info.endDate}</p>
+          <p>School name: {info.name}</p>
+          <p>Study title: {info.title}</p>
+          <p>Start date: {info.startDate}</p>
+          <p>End date: {info.endDate}</p>
           <button type="button" onClick={handleEdit}>
             Edit
           </button>
