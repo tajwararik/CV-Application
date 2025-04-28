@@ -4,10 +4,11 @@ form,
   font-size: 1.5rem;
   text-align: left;
   color: #e5e2e2;
+  text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.6);
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 fieldset,
@@ -24,6 +25,15 @@ input {
   border-radius: 8px;
 }
 
+fieldset:last-of-type > label {
+  font-size: 1.25rem;
+}
+
+#checkbox {
+  width: unset;
+  vertical-align: middle;
+}
+
 form > button,
 .profile > button {
   font-size: 1.25rem;
@@ -34,4 +44,5 @@ form > button,
   color: #e5e2e2;
   background-color: #363636;
   cursor: pointer;
+  text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.6);
 }
