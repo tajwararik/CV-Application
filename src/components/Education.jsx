@@ -89,12 +89,12 @@ function EducationalInfo() {
           </fieldset>
 
           <fieldset>
-            <label htmlFor="checkbox">
+            <label htmlFor="studying-checkbox">
               <input
                 type="checkbox"
                 name="checkbox"
-                id="checkbox"
-                onClick={handleCheckbox}
+                id="studying-checkbox"
+                onChange={handleCheckbox}
                 checked={checkbox}
               />{" "}
               Still studying
