@@ -29,7 +29,7 @@ fieldset:last-of-type > label {
   font-size: 1.25rem;
 }
 
-#checkbox {
+input[name="checkbox"] {
   width: unset;
   vertical-align: middle;
 }
