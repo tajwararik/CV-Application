@@ -11,20 +11,20 @@ function EducationalInfo() {
   });
   const [checkbox, setCheckbox] = useState(false);
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsEdit(false);
-  }
+  };
 
-  function handleEdit() {
+  const handleEdit = () => {
     setIsEdit(true);
-  }
+  };
 
-  function handleChange(e) {
+  const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
-  }
+  };
 
-  function handleCheckbox(e) {
+  const handleCheckbox = (e) => {
     const isChecked = e.target.checked;
 
     setCheckbox(isChecked);
@@ -32,7 +32,7 @@ function EducationalInfo() {
       ...previousInfo,
       endDate: isChecked ? "Present" : "",
     }));
-  }
+  };
 
   return (
     <>
