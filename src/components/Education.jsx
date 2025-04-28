@@ -9,6 +9,7 @@ function EducationalInfo() {
     startDate: "",
     endDate: "",
   });
+  const [checkbox, setCheckbox] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -22,6 +23,17 @@ function EducationalInfo() {
   function handleChange(e) {
     setInfo({ ...info, [e.target.name]: e.target.value });
   }
+
+  function handleCheckbox() {
+    if (!checkbox) {
+      setCheckbox(true);
+      info.endDate = "Present";
+    } else {
+      setCheckbox(false);
+      info.endDate = "";
+    }
+  }
+
   return (
     <>
       <h2>Educational Experience</h2>
@@ -72,7 +84,21 @@ function EducationalInfo() {
               value={info.endDate}
               onChange={handleChange}
               placeholder="Enter the date"
+              disabled={checkbox}
             />
+          </fieldset>
+
+          <fieldset>
+            <label htmlFor="checkbox">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+                onClick={handleCheckbox}
+                checked={checkbox}
+              />{" "}
+              Still studying
+            </label>
           </fieldset>
 
           <button type="submit">Submit</button>
