@@ -10,6 +10,7 @@ function ExperienceInfo() {
     startDate: "",
     endDate: "",
   });
+  const [checkbox, setCheckbox] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -22,6 +23,16 @@ function ExperienceInfo() {
 
   function handleChange(e) {
     setInfo({ ...info, [e.target.name]: e.target.value });
+  }
+
+  function handleCheckbox() {
+    if (!checkbox) {
+      setCheckbox(true);
+      info.endDate = "present";
+    } else {
+      setCheckbox(false);
+      info.endDate = "";
+    }
   }
 
   return (
@@ -86,7 +97,21 @@ function ExperienceInfo() {
               value={info.endDate}
               onChange={handleChange}
               placeholder="Enter the date"
+              disabled={checkbox}
             />
+          </fieldset>
+
+          <fieldset>
+            <label htmlFor="working-checkbox">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="working-checkbox"
+                onChange={handleCheckbox}
+                checked={checkbox}
+              />{" "}
+              Still working
+            </label>
           </fieldset>
 
           <button type="submit">Submit</button>
