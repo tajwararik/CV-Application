@@ -25,14 +25,14 @@ function ExperienceInfo() {
     setInfo({ ...info, [e.target.name]: e.target.value });
   }
 
-  function handleCheckbox() {
-    if (!checkbox) {
-      setCheckbox(true);
-      info.endDate = "present";
-    } else {
-      setCheckbox(false);
-      info.endDate = "";
-    }
+  function handleCheckbox(e) {
+    const isChecked = e.target.checked;
+
+    setCheckbox(isChecked);
+    setInfo((previousInfo) => ({
+      ...previousInfo,
+      endDate: isChecked ? "Present" : "",
+    }));
   }
 
   return (
